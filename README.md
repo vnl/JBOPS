@@ -367,3 +367,17 @@ Tautulli > Settings > Notification Agents > New Script > Script Arguments:
 - [ ]  TAUTULLI_URL - Local/Remote IP to connect to Tautulli ('http://localhost:8181',  'https://x.x.x.x:8182', etc.)
 - [ ]  TAUTULLI_APIKEY - Tautulli Settings > Access Control > Enable API - API Key
 </details>
+
+
+
+First you'll need python installed. As far as how to run them, it depends on the script. Some work with PlexPy, meaning PlexPy will pass arguments to the script and then run the script. For instance a kill stream script may receive a username from PlexPy then find that username in the stream session and then kill that users stream. Some scripts can be ran by themselves usually from the command line or terminal. So something like
+
+#python ips_to_map.py
+will run the ips_to_map script. You'll need to fill in the section of the script that usually says ##Edit Settings ##. Usually these settings are:
+
+PLEX_HOST = ''
+PLEX_PORT = 32400
+PLEX_SSL = ''  # s or ''
+PLEX_TOKEN = 'xxxxxx'
+PLEXPY_API = 'xxxx'
+You'll need to find this information and fill in those variables. Hope that helps
